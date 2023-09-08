@@ -47,3 +47,16 @@ def h1(s):
         if goal[idx] != board[idx]:
             res += 1
     return res
+
+def h2(s):
+    # calculate to sum of Manhattan distances
+    board, _, _ = s
+    res = 0
+    for idx, tile in enumerate(board):
+        if tile > 0:
+            goal_location = tile-1
+            current_location = idx
+            gr, gc = goal_location//3, goal_location%3
+            cr, cc = current_location//3, current_location%3
+            res += abs(gr-cr) + abs(gc-cc)
+    return res
