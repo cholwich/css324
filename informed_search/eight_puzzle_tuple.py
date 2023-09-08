@@ -42,8 +42,8 @@ def h1(s):
     res = 0
     # The for loop counts the number of elements that is different from
     # the goal configuration.
-    # We start from index 1 to 8 because the blank is excluded.
-    for idx in range(1, 9):
+    # We start from index 0 to 7 because the blank is excluded.
+    for idx in range(0, 8):
         if goal[idx] != board[idx]:
             res += 1
     return res
