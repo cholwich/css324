@@ -11,4 +11,4 @@ if goal_node is not None:
     print("Path cost = %d" % goal_node[3])
     print("Number of Visited States = %d" % n_visits)
 else:
-    print("No solutions found")()
+    print("No solutions found")
